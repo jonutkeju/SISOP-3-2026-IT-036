@@ -1010,7 +1010,6 @@ int main() {
 }
 ```
 </details>
-<br>
 
 ### F. Kendala & Revisi
 Tidak ada kendala dan revisi pada `soal1`
@@ -2156,3 +2155,7 @@ int main() {
     matchmaker(NULL);
 }
 ```
+
+### F. Kendala & Revisi
+BANYAK kendala & revisi
+<br><br>
