@@ -411,7 +411,20 @@ write_log(
 <br><br>
 
 ### D. Output
-Placeholder
+Dengan menjalankan `./wired` pada terminal 1, dan menjalankan `./navi` pada terminal 2 (chat 1) dan 3 (chat 2),
+1. Chat 1 memiliki test output berikut.
+![alt text](assets/3_chat1.png)
+2. Chat 2 memiliki test output berikut (Handling double usn dan test `/exit`).
+![alt text](assets/3_chat2.png)
+3. Chat 2 login sebagai admin (The Knights) dan mencoba RPC Commandnya.
+![alt text](assets/3_theknights.png)
+4. Karena `4` akan `/exit`, sekarang coba emergency shutdown yang outputnya sempat dirasakan pada Chat 2 Client.
+![alt text](assets/3_theknights2.png)
+5. Sehingga terminal `wired` kembali menjadi terminal input biasa.
+![alt text](assets/3_afterwired.png)
+6. Dan terminal Chat 1 emergency shutdown dan `/exit`.
+![alt text](assets/3_afternavi.png)
+<br><br>
 
 ### E. Markdown C
 <details>
@@ -1012,7 +1025,7 @@ int main() {
 </details>
 
 ### F. Kendala & Revisi
-Tidak ada kendala dan revisi pada `soal1`
+Output pesan client A ke client B tidak disertai `\n`. lalu, `\n` bisa terhitung input.
 <br><br>
 
 ## [soal2] : The Battle of Eterion
@@ -1553,7 +1566,7 @@ pthread_mutex_unlock(&lock);
   * Mutex digunakan untuk mencegah race condition.
 
 ### D. Output
-Placeholder
+Kode tidak berhasil, sehingga output mengikuti pada video demo
 
 ### E. Markdown
 <details>
@@ -2157,5 +2170,9 @@ int main() {
 ```
 
 ### F. Kendala & Revisi
-BANYAK kendala & revisi
+BANYAK KENDALA seperti :
+1. Memulai Battle harus menginput 1 dua kali. Kedua client yang melakukannya juga akan masuk battle realm 2 kali.
+2. Armory berhasil diterapkan, namun tidak bisa menukar weapon (sistem equip/unequip).
+3. History berhasil diterapkan, tetapi hasil match pada poin 1 biasanya memberi hadiah menang DAN hadiah kalah ke dua pihak dua kali.
+4. Dan lainnya (yang kemungkinan belum bisa diidentifikasi).
 <br><br>
